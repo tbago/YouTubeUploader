@@ -29,56 +29,29 @@
 #import "VideoUploadViewController.h"
 #import "Utils.h"
 
-UITextField *titleField;
-UITextField *descField;
+@interface VideoUploadViewController () <YouTubeUploadVideoDelegate>
 
-@interface VideoUploadViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UIView         *playerBackView;
+@property (weak, nonatomic) IBOutlet UITextField    *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField    *descriptionTextField;
 
 @end
 
 @implementation VideoUploadViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    _uploadVideo = [[YouTubeUploadVideo alloc] init];
-    _uploadVideo.delegate = self;
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 350, 520)];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _uploadVideo = [[YouTubeUploadVideo alloc] init];
+    _uploadVideo.delegate = self;
+    
     // Do any additional setup after loading the view.
     self.player = [[MPMoviePlayerController alloc] initWithContentURL:_videoUrl];
-    self.player.view.frame = CGRectMake(0, 0, 350, 350);
-    [self.scrollView addSubview:self.player.view];
+    self.player.view.frame = self.playerBackView.frame;
+    [self.playerBackView addSubview:self.player.view];
     [self.player play];
-    
-    titleField = [[UITextField alloc] initWithFrame:CGRectMake(0, 360, 200, 30)];
-    titleField.borderStyle = UITextBorderStyleRoundedRect;
-    titleField.placeholder = @"Title";
-    titleField.autocorrectionType = UITextAutocorrectionTypeYes;
-    titleField.keyboardType = UIKeyboardTypeDefault;
-    titleField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    titleField.delegate = self;
-    [titleField setReturnKeyType:UIReturnKeyDone];
-    
-    descField = [[UITextField alloc] initWithFrame:CGRectMake(0, 400, 310, 30)];
-    descField.borderStyle = UITextBorderStyleRoundedRect;
-    descField.placeholder = @"Description";
-    descField.autocorrectionType = UITextAutocorrectionTypeYes;
-    descField.keyboardType = UIKeyboardTypeDefault;
-    descField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    descField.delegate = self;
-    [descField setReturnKeyType:UIReturnKeyDone];
-    [descField resignFirstResponder];
-    
-    [self.scrollView addSubview:titleField];
-    [self.scrollView addSubview:descField];
     
     UIBarButtonItem* uploadItem =
     [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
@@ -88,19 +61,18 @@ UITextField *descField;
     self.toolbarItems = [NSArray arrayWithObjects:uploadItem, nil];
     
     [self registerForKeyboardNotifications];
-    self.view = self.scrollView;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)uploadYTDL:(id)sender {
+#pragma mark - action
+- (IBAction)uploadYTDL:(UIBarButtonItem *)sender {
     NSData *fileData = [NSData dataWithContentsOfURL:_videoUrl];
-    NSString *title = titleField.text;
-    NSString *description = descField.text;
+    NSString *title = self.titleTextField.text;
+    NSString *description = self.descriptionTextField.text;
     
     if ([title isEqualToString:@""]) {
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];

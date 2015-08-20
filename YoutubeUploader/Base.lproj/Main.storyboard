@@ -23,6 +23,67 @@
             </objects>
             <point key="canvasLocation" x="934" y="689"/>
         </scene>
+        <!--Video Upload View Controller-->
+        <scene sceneID="Vuc-Y5-6kX">
+            <objects>
+                <viewController storyboardIdentifier="VideoUploadViewController" id="MGl-2m-Qe7" customClass="VideoUploadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXl-wi-IWB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dr9-ju-oio"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pen-fU-b6w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lrk-Eb-4hv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-Tg-411">
+                                        <rect key="frame" x="36" y="334" width="227" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MGl-2m-Qe7" id="iAq-ua-1hy"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O1R-Vq-wzf">
+                                        <rect key="frame" x="36" y="387" width="568" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="MGl-2m-Qe7" id="A37-ha-9Bd"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t82-QD-NAO">
+                                        <rect key="frame" x="0.0" y="26" width="600" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lrk-Eb-4hv" firstAttribute="top" secondItem="pen-fU-b6w" secondAttribute="top" id="19Y-NE-dPm"/>
+                            <constraint firstAttribute="bottom" secondItem="Lrk-Eb-4hv" secondAttribute="bottom" id="JXu-fc-YnX"/>
+                            <constraint firstAttribute="trailing" secondItem="Lrk-Eb-4hv" secondAttribute="trailing" id="qY9-kj-eWx"/>
+                            <constraint firstItem="Lrk-Eb-4hv" firstAttribute="leading" secondItem="pen-fU-b6w" secondAttribute="leading" id="zCY-7P-HXQ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="action" id="pD1-zc-aSm"/>
+                    </toolbarItems>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="O1R-Vq-wzf" id="Etr-Sb-3nz"/>
+                        <outlet property="playerBackView" destination="t82-QD-NAO" id="Dwn-zG-juh"/>
+                        <outlet property="titleTextField" destination="GQs-Tg-411" id="ij8-OI-C2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7d-e8-oV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="1389"/>
+        </scene>
         <!--Video List View Controller-->
         <scene sceneID="w7p-yC-8qn">
             <objects>

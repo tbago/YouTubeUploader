@@ -165,11 +165,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
         
         NSURL *videoUrl = [info objectForKey:UIImagePickerControllerMediaURL];
         
-        VideoUploadViewController *uploadController = [[VideoUploadViewController alloc] init];
+        VideoUploadViewController *uploadController = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoUploadViewController"];
         uploadController.videoUrl = videoUrl;
         uploadController.youtubeService = self.youtubeService;
         
-        [[self navigationController] pushViewController:uploadController animated:YES];
+        [self.navigationController pushViewController:uploadController animated:YES];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

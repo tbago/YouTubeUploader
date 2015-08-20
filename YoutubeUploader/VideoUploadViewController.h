@@ -31,13 +31,12 @@
 #import "VideoData.h"
 #import "YouTubeUploadVideo.h"
 
-@interface VideoUploadViewController : UIViewController<YouTubeUploadVideoDelegate, UITextFieldDelegate>
+@interface VideoUploadViewController : UIViewController
 
 @property(nonatomic, strong) UIWebView *webView;
 @property(nonatomic, strong) NSURL *videoUrl;
 @property(nonatomic, retain) GTLServiceYouTube *youtubeService;
 @property(nonatomic, retain) MPMoviePlayerController *player;
-@property(nonatomic, retain) UIScrollView *scrollView;
 @property(nonatomic, retain) UITextField *activeField;
 @property(nonatomic, strong) YouTubeUploadVideo *uploadVideo;
 
