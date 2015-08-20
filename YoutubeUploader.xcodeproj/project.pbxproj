@@ -15,6 +15,9 @@
 		D06710A61B85AFBF00241C0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06710A41B85AFBF00241C0D /* LaunchScreen.xib */; };
 		D06710BD1B85B1EF00241C0D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D06710BC1B85B1EF00241C0D /* Utils.m */; };
 		D06710C01B85B3E700241C0D /* VideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D06710BF1B85B3E700241C0D /* VideoData.m */; };
+		D06712C21B85B82600241C0D /* GTLCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C01B85B82600241C0D /* GTLCommon_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D06712C31B85B82600241C0D /* GTLNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D06712C61B85B8A600241C0D /* GTLYouTube_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		D06710BC1B85B1EF00241C0D /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		D06710BE1B85B3E700241C0D /* VideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoData.h; sourceTree = "<group>"; };
 		D06710BF1B85B3E700241C0D /* VideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoData.m; sourceTree = "<group>"; };
+		D06712C01B85B82600241C0D /* GTLCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLCommon_Sources.m; sourceTree = "<group>"; };
+		D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLNetworking_Sources.m; sourceTree = "<group>"; };
+		D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLYouTube_Sources.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +99,20 @@
 		D06710C11B85B59800241C0D /* GoogleAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D06712C41B85B88C00241C0D /* Youtube */,
+				D06712C01B85B82600241C0D /* GTLCommon_Sources.m */,
+				D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */,
 			);
 			path = GoogleAPI;
 			sourceTree = SOURCE_ROOT;
+		};
+		D06712C41B85B88C00241C0D /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */,
+			);
+			path = Youtube;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -171,7 +188,10 @@
 				D067109B1B85AFBF00241C0D /* AppDelegate.m in Sources */,
 				D06710981B85AFBF00241C0D /* main.m in Sources */,
 				D06710C01B85B3E700241C0D /* VideoData.m in Sources */,
+				D06712C31B85B82600241C0D /* GTLNetworking_Sources.m in Sources */,
 				D06710BD1B85B1EF00241C0D /* Utils.m in Sources */,
+				D06712C61B85B8A600241C0D /* GTLYouTube_Sources.m in Sources */,
+				D06712C21B85B82600241C0D /* GTLCommon_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 					./GoogleAPI/Youtube,
 					./GoogleAPI/Utilities,
 					./GoogleAPI/Objects,
+					./GoogleAPi/OAuth2,
 				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -310,6 +331,7 @@
 					./GoogleAPI/Youtube,
 					./GoogleAPI/Utilities,
 					./GoogleAPI/Objects,
+					./GoogleAPi/OAuth2,
 				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
