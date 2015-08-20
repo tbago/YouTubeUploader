@@ -32,57 +32,39 @@
 #import "VideoPlayerViewController.h"
 #import "VideoUploadViewController.h"
 
+@interface VideoListViewController()<YouTubeGetUploadsDelegate,
+                                UISearchBarDelegate,
+                                UITableViewDataSource,
+                                UITableViewDelegate,
+                                UIImagePickerControllerDelegate,
+                                UINavigationControllerDelegate,
+                                UITabBarDelegate>
+
+@end
+
 @implementation VideoListViewController
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        _getUploads = [[YouTubeGetUploads alloc] init];
-        _getUploads.delegate = self;
-        _videos = [[NSArray alloc] init];
-    }
-    return self;
-}
-
-
-- (void)loadView {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
     self.title = @"YouTube Direct Lite";
     self.navigationItem.hidesBackButton = YES;
     
-    [self viewDidLoad];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    UIBarButtonItem *folderItem = [[UIBarButtonItem alloc] initWithTitle:@"Library"
-                                                                   style:UIBarButtonItemStylePlain
-                                                                  target:self
-                                                                  action:@selector(showVideoLibrary)];
-    
-    UIBarButtonItem *flexible =
-    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                  target:nil
-                                                  action:nil];
-    UIBarButtonItem *recordItem =
-    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
-                                                  target:self
-                                                  action:@selector(showCamera)];
-    
-    self.toolbarItems = [NSArray arrayWithObjects:folderItem, flexible, recordItem, nil];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:(CGRectZero) style:(UITableViewStylePlain)];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.rowHeight = 80;
-    self.tableView.separatorColor = [UIColor clearColor];
-    self.view = self.tableView;
+    _getUploads = [[YouTubeGetUploads alloc] init];
+    _getUploads.delegate = self;
+    _videos = [[NSArray alloc] init];
     
     [self.getUploads getYouTubeUploadsWithService:self.youtubeService];
 }
 
--(void)folderButtonPressed:(UIButton *)button
-{
+#pragma mark - action
+- (IBAction)libraryButtonPressed:(UIBarButtonItem *) sender {
     [self showVideoLibrary];
 }
 
--(void)recordButtonPressed:(UIButton *)button
+-(IBAction)cameraButtonPressed:(UIBarButtonItem *) sender
 {
     [self showCamera];
 }
@@ -100,20 +82,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *const kReuseIdentifier = @"imageCell";
+    static NSString *const kReuseIdentifier = @"ImageCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle)
-                                      reuseIdentifier:kReuseIdentifier];
-    }
+    
     VideoData *vidData = [self.videos objectAtIndex:indexPath.row];
     cell.imageView.image = vidData.thumbnail;
     cell.textLabel.text = [vidData getTitle];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ -- %@ views",
                                  [Utils humanReadableFromYouTubeTime:vidData.getDuration],
                                  vidData.getViews];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
 

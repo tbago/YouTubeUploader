@@ -54,9 +54,39 @@
                                                       clientSecret:kClientSecret];
     if (![self isAuthorized]) {
         // Not yet authorized, request authorization and push the login UI onto the navigation stack.
-        [[self navigationController] pushViewController:[self createAuthController] animated:YES];
+        [self.navigationController pushViewController:[self createAuthController] animated:YES];
     }
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // Always display the camera UI.
+    [self showList];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - action
+
+- (IBAction)startOAuthFlow:(id)sender {
+    GTMOAuth2ViewControllerTouch *viewController;
+    
+    viewController = [[GTMOAuth2ViewControllerTouch alloc]
+                      initWithScope:kGTLAuthScopeYouTube
+                      clientID:kClientID
+                      clientSecret:kClientSecret
+                      keychainItemName:kKeychainItemName
+                      delegate:self
+                      finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+    
+    [[self navigationController] pushViewController:viewController animated:YES];
+}
+
+#pragma mark - helper function
 
 // Helper to check if user is authorized
 - (BOOL)isAuthorized {
@@ -90,35 +120,10 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    // Always display the camera UI.
-    [self showList];
-}
-
 - (void)showList {
-    VideoListViewController *listUI = [[VideoListViewController alloc] init];
+    VideoListViewController *listUI = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoListViewController"];
     listUI.youtubeService = self.youtubeService;
-    [[self navigationController] pushViewController:listUI animated:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)startOAuthFlow:(id)sender {
-    GTMOAuth2ViewControllerTouch *viewController;
-    
-    viewController = [[GTMOAuth2ViewControllerTouch alloc]
-                      initWithScope:kGTLAuthScopeYouTube
-                      clientID:kClientID
-                      clientSecret:kClientSecret
-                      keychainItemName:kKeychainItemName
-                      delegate:self
-                      finishedSelector:@selector(viewController:finishedWithAuth:error:)];
-    
-    [[self navigationController] pushViewController:viewController animated:YES];
+    [self.navigationController pushViewController:listUI animated:YES];
 }
 
 @end

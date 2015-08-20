@@ -33,13 +33,7 @@
 #import "YouTubeGetUploads.h"
 #import "YouTubeUploadVideo.h"
 
-@interface VideoListViewController : UITableViewController<YouTubeGetUploadsDelegate,
-                                                            UISearchBarDelegate,
-                                                            UITableViewDataSource,
-                                                            UITableViewDelegate,
-                                                            UIImagePickerControllerDelegate,
-                                                            UINavigationControllerDelegate,
-                                                            UITabBarDelegate>
+@interface VideoListViewController : UITableViewController
 
 @property(nonatomic, strong) NSArray *videos;
 @property(nonatomic, strong) YouTubeGetUploads *getUploads;
