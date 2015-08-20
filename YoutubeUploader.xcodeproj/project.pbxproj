@@ -22,6 +22,11 @@
 		D06712CF1B85BA4500241C0D /* YouTubeGetUploads.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712CB1B85BA4500241C0D /* YouTubeGetUploads.m */; };
 		D06712D01B85BA4500241C0D /* YouTubeUploadVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712CD1B85BA4500241C0D /* YouTubeUploadVideo.m */; };
 		D06712D31B85BA6C00241C0D /* UploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712D21B85BA6C00241C0D /* UploadController.m */; };
+		D06712D71B85BB8D00241C0D /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712D61B85BB8D00241C0D /* VideoListViewController.m */; };
+		D06712DA1B85BD5700241C0D /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712D91B85BD5700241C0D /* VideoPlayerViewController.m */; };
+		D06712DC1B85BDAF00241C0D /* iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = D06712DB1B85BDAF00241C0D /* iframe-player.html */; };
+		D06712DF1B85BDFF00241C0D /* VideoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712DE1B85BDFF00241C0D /* VideoUploadViewController.m */; };
+		D06712E31B85BEC800241C0D /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06712E21B85BEC800241C0D /* GTMOAuth2ViewTouch.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,14 @@
 		D06712CD1B85BA4500241C0D /* YouTubeUploadVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeUploadVideo.m; sourceTree = "<group>"; };
 		D06712D11B85BA6C00241C0D /* UploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadController.h; sourceTree = "<group>"; };
 		D06712D21B85BA6C00241C0D /* UploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadController.m; sourceTree = "<group>"; };
+		D06712D51B85BB8D00241C0D /* VideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
+		D06712D61B85BB8D00241C0D /* VideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
+		D06712D81B85BD5700241C0D /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		D06712D91B85BD5700241C0D /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		D06712DB1B85BDAF00241C0D /* iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "iframe-player.html"; path = "YoutubeUploader/iframe-player.html"; sourceTree = SOURCE_ROOT; };
+		D06712DD1B85BDFF00241C0D /* VideoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploadViewController.h; sourceTree = "<group>"; };
+		D06712DE1B85BDFF00241C0D /* VideoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploadViewController.m; sourceTree = "<group>"; };
+		D06712E21B85BEC800241C0D /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +97,19 @@
 			children = (
 				D06710C11B85B59800241C0D /* GoogleAPI */,
 				D06712C71B85BA1200241C0D /* YoutubeAPIProtocols */,
+				D06712DB1B85BDAF00241C0D /* iframe-player.html */,
 				D06710BB1B85B1EF00241C0D /* Utils.h */,
 				D06710BC1B85B1EF00241C0D /* Utils.m */,
 				D06710BE1B85B3E700241C0D /* VideoData.h */,
 				D06710BF1B85B3E700241C0D /* VideoData.m */,
 				D067109C1B85AFBF00241C0D /* MainViewController.h */,
 				D067109D1B85AFBF00241C0D /* MainViewController.m */,
+				D06712D51B85BB8D00241C0D /* VideoListViewController.h */,
+				D06712D61B85BB8D00241C0D /* VideoListViewController.m */,
+				D06712D81B85BD5700241C0D /* VideoPlayerViewController.h */,
+				D06712D91B85BD5700241C0D /* VideoPlayerViewController.m */,
+				D06712DD1B85BDFF00241C0D /* VideoUploadViewController.h */,
+				D06712DE1B85BDFF00241C0D /* VideoUploadViewController.m */,
 				D067109F1B85AFBF00241C0D /* Main.storyboard */,
 				D06710951B85AFBF00241C0D /* Supporting Files */,
 			);
@@ -112,6 +132,7 @@
 		D06710C11B85B59800241C0D /* GoogleAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D06712E01B85BEA200241C0D /* OAuth2 */,
 				D06712C41B85B88C00241C0D /* Youtube */,
 				D06712C01B85B82600241C0D /* GTLCommon_Sources.m */,
 				D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */,
@@ -141,6 +162,22 @@
 			);
 			name = YoutubeAPIProtocols;
 			path = ../YoutubeAPIProtocols;
+			sourceTree = "<group>";
+		};
+		D06712E01B85BEA200241C0D /* OAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				D06712E11B85BEB200241C0D /* Touch */,
+			);
+			path = OAuth2;
+			sourceTree = "<group>";
+		};
+		D06712E11B85BEB200241C0D /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				D06712E21B85BEC800241C0D /* GTMOAuth2ViewTouch.xib */,
+			);
+			path = Touch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +237,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06712E31B85BEC800241C0D /* GTMOAuth2ViewTouch.xib in Resources */,
 				D06710A11B85AFBF00241C0D /* Main.storyboard in Resources */,
 				D06710A61B85AFBF00241C0D /* LaunchScreen.xib in Resources */,
 				D06710A31B85AFBF00241C0D /* Images.xcassets in Resources */,
+				D06712DC1B85BDAF00241C0D /* iframe-player.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,11 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D067109E1B85AFBF00241C0D /* MainViewController.m in Sources */,
+				D06712DF1B85BDFF00241C0D /* VideoUploadViewController.m in Sources */,
 				D06712D01B85BA4500241C0D /* YouTubeUploadVideo.m in Sources */,
 				D067109B1B85AFBF00241C0D /* AppDelegate.m in Sources */,
 				D06710981B85AFBF00241C0D /* main.m in Sources */,
 				D06712CF1B85BA4500241C0D /* YouTubeGetUploads.m in Sources */,
+				D06712D71B85BB8D00241C0D /* VideoListViewController.m in Sources */,
 				D06710C01B85B3E700241C0D /* VideoData.m in Sources */,
+				D06712DA1B85BD5700241C0D /* VideoPlayerViewController.m in Sources */,
 				D06712D31B85BA6C00241C0D /* UploadController.m in Sources */,
 				D06712C31B85B82600241C0D /* GTLNetworking_Sources.m in Sources */,
 				D06712CE1B85BA4500241C0D /* YouTubeDirectTag.m in Sources */,
@@ -344,7 +386,8 @@
 					./GoogleAPI/Youtube,
 					./GoogleAPI/Utilities,
 					./GoogleAPI/Objects,
-					./GoogleAPi/OAuth2,
+					./GoogleAPI/OAuth2,
+					./GoogleAPI/OAuth2/Touch,
 				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -364,7 +407,8 @@
 					./GoogleAPI/Youtube,
 					./GoogleAPI/Utilities,
 					./GoogleAPI/Objects,
-					./GoogleAPi/OAuth2,
+					./GoogleAPI/OAuth2,
+					./GoogleAPI/OAuth2/Touch,
 				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
