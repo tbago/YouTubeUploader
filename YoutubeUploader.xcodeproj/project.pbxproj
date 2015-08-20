@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D06710981B85AFBF00241C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06710971B85AFBF00241C0D /* main.m */; };
 		D067109B1B85AFBF00241C0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D067109A1B85AFBF00241C0D /* AppDelegate.m */; };
-		D067109E1B85AFBF00241C0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067109D1B85AFBF00241C0D /* ViewController.m */; };
+		D067109E1B85AFBF00241C0D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067109D1B85AFBF00241C0D /* MainViewController.m */; };
 		D06710A11B85AFBF00241C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D067109F1B85AFBF00241C0D /* Main.storyboard */; };
 		D06710A31B85AFBF00241C0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06710A21B85AFBF00241C0D /* Images.xcassets */; };
 		D06710A61B85AFBF00241C0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06710A41B85AFBF00241C0D /* LaunchScreen.xib */; };
@@ -18,6 +18,10 @@
 		D06712C21B85B82600241C0D /* GTLCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C01B85B82600241C0D /* GTLCommon_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D06712C31B85B82600241C0D /* GTLNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D06712C61B85B8A600241C0D /* GTLYouTube_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D06712CE1B85BA4500241C0D /* YouTubeDirectTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712C91B85BA4500241C0D /* YouTubeDirectTag.m */; };
+		D06712CF1B85BA4500241C0D /* YouTubeGetUploads.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712CB1B85BA4500241C0D /* YouTubeGetUploads.m */; };
+		D06712D01B85BA4500241C0D /* YouTubeUploadVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712CD1B85BA4500241C0D /* YouTubeUploadVideo.m */; };
+		D06712D31B85BA6C00241C0D /* UploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712D21B85BA6C00241C0D /* UploadController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +30,8 @@
 		D06710971B85AFBF00241C0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D06710991B85AFBF00241C0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D067109A1B85AFBF00241C0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D067109C1B85AFBF00241C0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D067109D1B85AFBF00241C0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D067109C1B85AFBF00241C0D /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D067109D1B85AFBF00241C0D /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D06710A01B85AFBF00241C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D06710A21B85AFBF00241C0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D06710A51B85AFBF00241C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -38,6 +42,14 @@
 		D06712C01B85B82600241C0D /* GTLCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLCommon_Sources.m; sourceTree = "<group>"; };
 		D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLNetworking_Sources.m; sourceTree = "<group>"; };
 		D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLYouTube_Sources.m; sourceTree = "<group>"; };
+		D06712C81B85BA4500241C0D /* YouTubeDirectTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeDirectTag.h; sourceTree = "<group>"; };
+		D06712C91B85BA4500241C0D /* YouTubeDirectTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeDirectTag.m; sourceTree = "<group>"; };
+		D06712CA1B85BA4500241C0D /* YouTubeGetUploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeGetUploads.h; sourceTree = "<group>"; };
+		D06712CB1B85BA4500241C0D /* YouTubeGetUploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeGetUploads.m; sourceTree = "<group>"; };
+		D06712CC1B85BA4500241C0D /* YouTubeUploadVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeUploadVideo.h; sourceTree = "<group>"; };
+		D06712CD1B85BA4500241C0D /* YouTubeUploadVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeUploadVideo.m; sourceTree = "<group>"; };
+		D06712D11B85BA6C00241C0D /* UploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadController.h; sourceTree = "<group>"; };
+		D06712D21B85BA6C00241C0D /* UploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				D06710C11B85B59800241C0D /* GoogleAPI */,
+				D06712C71B85BA1200241C0D /* YoutubeAPIProtocols */,
 				D06710BB1B85B1EF00241C0D /* Utils.h */,
 				D06710BC1B85B1EF00241C0D /* Utils.m */,
 				D06710BE1B85B3E700241C0D /* VideoData.h */,
 				D06710BF1B85B3E700241C0D /* VideoData.m */,
-				D067109C1B85AFBF00241C0D /* ViewController.h */,
-				D067109D1B85AFBF00241C0D /* ViewController.m */,
+				D067109C1B85AFBF00241C0D /* MainViewController.h */,
+				D067109D1B85AFBF00241C0D /* MainViewController.m */,
 				D067109F1B85AFBF00241C0D /* Main.storyboard */,
 				D06710951B85AFBF00241C0D /* Supporting Files */,
 			);
@@ -112,6 +125,22 @@
 				D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */,
 			);
 			path = Youtube;
+			sourceTree = "<group>";
+		};
+		D06712C71B85BA1200241C0D /* YoutubeAPIProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D06712D11B85BA6C00241C0D /* UploadController.h */,
+				D06712D21B85BA6C00241C0D /* UploadController.m */,
+				D06712C81B85BA4500241C0D /* YouTubeDirectTag.h */,
+				D06712C91B85BA4500241C0D /* YouTubeDirectTag.m */,
+				D06712CA1B85BA4500241C0D /* YouTubeGetUploads.h */,
+				D06712CB1B85BA4500241C0D /* YouTubeGetUploads.m */,
+				D06712CC1B85BA4500241C0D /* YouTubeUploadVideo.h */,
+				D06712CD1B85BA4500241C0D /* YouTubeUploadVideo.m */,
+			);
+			name = YoutubeAPIProtocols;
+			path = ../YoutubeAPIProtocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +213,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D067109E1B85AFBF00241C0D /* ViewController.m in Sources */,
+				D067109E1B85AFBF00241C0D /* MainViewController.m in Sources */,
+				D06712D01B85BA4500241C0D /* YouTubeUploadVideo.m in Sources */,
 				D067109B1B85AFBF00241C0D /* AppDelegate.m in Sources */,
 				D06710981B85AFBF00241C0D /* main.m in Sources */,
+				D06712CF1B85BA4500241C0D /* YouTubeGetUploads.m in Sources */,
 				D06710C01B85B3E700241C0D /* VideoData.m in Sources */,
+				D06712D31B85BA6C00241C0D /* UploadController.m in Sources */,
 				D06712C31B85B82600241C0D /* GTLNetworking_Sources.m in Sources */,
+				D06712CE1B85BA4500241C0D /* YouTubeDirectTag.m in Sources */,
 				D06710BD1B85B1EF00241C0D /* Utils.m in Sources */,
 				D06712C61B85B8A600241C0D /* GTLYouTube_Sources.m in Sources */,
 				D06712C21B85B82600241C0D /* GTLCommon_Sources.m in Sources */,
