@@ -13,6 +13,8 @@
 		D06710A11B85AFBF00241C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D067109F1B85AFBF00241C0D /* Main.storyboard */; };
 		D06710A31B85AFBF00241C0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06710A21B85AFBF00241C0D /* Images.xcassets */; };
 		D06710A61B85AFBF00241C0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06710A41B85AFBF00241C0D /* LaunchScreen.xib */; };
+		D06710BD1B85B1EF00241C0D /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D06710BC1B85B1EF00241C0D /* Utils.m */; };
+		D06710C01B85B3E700241C0D /* VideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D06710BF1B85B3E700241C0D /* VideoData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D06710A01B85AFBF00241C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D06710A21B85AFBF00241C0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D06710A51B85AFBF00241C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D06710BB1B85B1EF00241C0D /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		D06710BC1B85B1EF00241C0D /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		D06710BE1B85B3E700241C0D /* VideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoData.h; sourceTree = "<group>"; };
+		D06710BF1B85B3E700241C0D /* VideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,14 @@
 		D06710941B85AFBF00241C0D /* YoutubeUploader */ = {
 			isa = PBXGroup;
 			children = (
-				D06710991B85AFBF00241C0D /* AppDelegate.h */,
-				D067109A1B85AFBF00241C0D /* AppDelegate.m */,
+				D06710C11B85B59800241C0D /* GoogleAPI */,
+				D06710BB1B85B1EF00241C0D /* Utils.h */,
+				D06710BC1B85B1EF00241C0D /* Utils.m */,
+				D06710BE1B85B3E700241C0D /* VideoData.h */,
+				D06710BF1B85B3E700241C0D /* VideoData.m */,
 				D067109C1B85AFBF00241C0D /* ViewController.h */,
 				D067109D1B85AFBF00241C0D /* ViewController.m */,
 				D067109F1B85AFBF00241C0D /* Main.storyboard */,
-				D06710A21B85AFBF00241C0D /* Images.xcassets */,
-				D06710A41B85AFBF00241C0D /* LaunchScreen.xib */,
 				D06710951B85AFBF00241C0D /* Supporting Files */,
 			);
 			path = YoutubeUploader;
@@ -73,11 +80,22 @@
 		D06710951B85AFBF00241C0D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D06710A21B85AFBF00241C0D /* Images.xcassets */,
+				D06710991B85AFBF00241C0D /* AppDelegate.h */,
+				D067109A1B85AFBF00241C0D /* AppDelegate.m */,
+				D06710A41B85AFBF00241C0D /* LaunchScreen.xib */,
 				D06710961B85AFBF00241C0D /* Info.plist */,
 				D06710971B85AFBF00241C0D /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		D06710C11B85B59800241C0D /* GoogleAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GoogleAPI;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -152,6 +170,8 @@
 				D067109E1B85AFBF00241C0D /* ViewController.m in Sources */,
 				D067109B1B85AFBF00241C0D /* AppDelegate.m in Sources */,
 				D06710981B85AFBF00241C0D /* main.m in Sources */,
+				D06710C01B85B3E700241C0D /* VideoData.m in Sources */,
+				D06710BD1B85B1EF00241C0D /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +283,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./GoogleAPI,
+					./GoogleAPI/HTTPFetcher,
+					./GoogleAPI/Youtube,
+					./GoogleAPI/Utilities,
+					./GoogleAPI/Objects,
+				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +302,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./GoogleAPI,
+					./GoogleAPI/HTTPFetcher,
+					./GoogleAPI/Youtube,
+					./GoogleAPI/Utilities,
+					./GoogleAPI/Objects,
+				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +336,7 @@
 				D06710B71B85AFBF00241C0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
