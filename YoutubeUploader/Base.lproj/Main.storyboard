@@ -36,20 +36,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lrk-Eb-4hv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrk-Eb-4hv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t82-QD-NAO">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="600" id="iQ3-NZ-QNC"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="iQ3-NZ-QNC"/>
-                                            </mask>
-                                        </variation>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-Tg-411">
                                         <rect key="frame" x="10" y="334" width="220" height="30"/>
@@ -63,10 +55,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O1R-Vq-wzf">
-                                        <rect key="frame" x="10" y="387" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="biD-ic-Nka"/>
-                                        </constraints>
+                                        <rect key="frame" x="10" y="387" width="95" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
@@ -76,11 +65,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="t82-QD-NAO" firstAttribute="top" secondItem="Lrk-Eb-4hv" secondAttribute="top" id="5xj-h5-LyR"/>
+                                    <constraint firstItem="t82-QD-NAO" firstAttribute="width" secondItem="Lrk-Eb-4hv" secondAttribute="width" id="9fb-SS-fKF"/>
+                                    <constraint firstAttribute="trailing" secondItem="O1R-Vq-wzf" secondAttribute="trailing" constant="10" id="DqU-qM-Bi2"/>
                                     <constraint firstItem="GQs-Tg-411" firstAttribute="leading" secondItem="Lrk-Eb-4hv" secondAttribute="leading" constant="10" id="HcS-vf-uvg"/>
+                                    <constraint firstAttribute="centerX" secondItem="t82-QD-NAO" secondAttribute="centerX" id="RCc-Vi-kMr"/>
                                     <constraint firstItem="O1R-Vq-wzf" firstAttribute="top" secondItem="GQs-Tg-411" secondAttribute="bottom" constant="23" id="VMo-Pe-Xpl"/>
-                                    <constraint firstItem="t82-QD-NAO" firstAttribute="width" secondItem="Lrk-Eb-4hv" secondAttribute="width" id="WTl-0p-dmg"/>
                                     <constraint firstItem="O1R-Vq-wzf" firstAttribute="leading" secondItem="Lrk-Eb-4hv" secondAttribute="leading" constant="10" id="dhR-An-Qi6"/>
-                                    <constraint firstAttribute="centerX" secondItem="t82-QD-NAO" secondAttribute="centerX" id="jOg-Fi-GdC"/>
+                                    <constraint firstAttribute="bottom" secondItem="O1R-Vq-wzf" secondAttribute="bottom" constant="183" id="trO-3Y-ab0"/>
                                     <constraint firstItem="GQs-Tg-411" firstAttribute="top" secondItem="t82-QD-NAO" secondAttribute="bottom" constant="34" id="zOf-Ix-dus"/>
                                 </constraints>
                             </scrollView>
