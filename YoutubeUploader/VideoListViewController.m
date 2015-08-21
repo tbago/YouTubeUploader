@@ -47,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"YouTube Direct Lite";
+    self.title = @"YouTube Uploader";
     self.navigationItem.hidesBackButton = YES;
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];

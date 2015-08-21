@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D06710921B85AFBF00241C0D /* YoutubeUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06710921B85AFBF00241C0D /* YouTubeUploader.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTubeUploader.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06710961B85AFBF00241C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D06710971B85AFBF00241C0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D06710991B85AFBF00241C0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		D06710891B85AFBF00241C0D = {
 			isa = PBXGroup;
 			children = (
-				D06710941B85AFBF00241C0D /* YoutubeUploader */,
+				D06710941B85AFBF00241C0D /* YouTubeUploader */,
 				D06710931B85AFBF00241C0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,16 +87,16 @@
 		D06710931B85AFBF00241C0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D06710921B85AFBF00241C0D /* YoutubeUploader.app */,
+				D06710921B85AFBF00241C0D /* YouTubeUploader.temp_caseinsensitive_rename.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D06710941B85AFBF00241C0D /* YoutubeUploader */ = {
+		D06710941B85AFBF00241C0D /* YouTubeUploader */ = {
 			isa = PBXGroup;
 			children = (
 				D06710C11B85B59800241C0D /* GoogleAPI */,
-				D06712C71B85BA1200241C0D /* YoutubeAPIProtocols */,
+				D06712C71B85BA1200241C0D /* YouTubeAPIProtocols */,
 				D06712DB1B85BDAF00241C0D /* iframe-player.html */,
 				D06710BB1B85B1EF00241C0D /* Utils.h */,
 				D06710BC1B85B1EF00241C0D /* Utils.m */,
@@ -113,7 +113,7 @@
 				D067109F1B85AFBF00241C0D /* Main.storyboard */,
 				D06710951B85AFBF00241C0D /* Supporting Files */,
 			);
-			path = YoutubeUploader;
+			path = YouTubeUploader;
 			sourceTree = "<group>";
 		};
 		D06710951B85AFBF00241C0D /* Supporting Files */ = {
@@ -133,22 +133,22 @@
 			isa = PBXGroup;
 			children = (
 				D06712E01B85BEA200241C0D /* OAuth2 */,
-				D06712C41B85B88C00241C0D /* Youtube */,
+				D06712C41B85B88C00241C0D /* YouTube */,
 				D06712C01B85B82600241C0D /* GTLCommon_Sources.m */,
 				D06712C11B85B82600241C0D /* GTLNetworking_Sources.m */,
 			);
 			path = GoogleAPI;
 			sourceTree = SOURCE_ROOT;
 		};
-		D06712C41B85B88C00241C0D /* Youtube */ = {
+		D06712C41B85B88C00241C0D /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
 				D06712C51B85B8A600241C0D /* GTLYouTube_Sources.m */,
 			);
-			path = Youtube;
+			path = YouTube;
 			sourceTree = "<group>";
 		};
-		D06712C71B85BA1200241C0D /* YoutubeAPIProtocols */ = {
+		D06712C71B85BA1200241C0D /* YouTubeAPIProtocols */ = {
 			isa = PBXGroup;
 			children = (
 				D06712D11B85BA6C00241C0D /* UploadController.h */,
@@ -160,8 +160,8 @@
 				D06712CC1B85BA4500241C0D /* YouTubeUploadVideo.h */,
 				D06712CD1B85BA4500241C0D /* YouTubeUploadVideo.m */,
 			);
-			name = YoutubeAPIProtocols;
-			path = ../YoutubeAPIProtocols;
+			name = YouTubeAPIProtocols;
+			path = ../YouTubeAPIProtocols;
 			sourceTree = "<group>";
 		};
 		D06712E01B85BEA200241C0D /* OAuth2 */ = {
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D06710911B85AFBF00241C0D /* YoutubeUploader */ = {
+		D06710911B85AFBF00241C0D /* YouTubeUploader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D06710B51B85AFBF00241C0D /* Build configuration list for PBXNativeTarget "YoutubeUploader" */;
+			buildConfigurationList = D06710B51B85AFBF00241C0D /* Build configuration list for PBXNativeTarget "YouTubeUploader" */;
 			buildPhases = (
 				D067108E1B85AFBF00241C0D /* Sources */,
 				D067108F1B85AFBF00241C0D /* Frameworks */,
@@ -195,9 +195,9 @@
 			);
 			dependencies = (
 			);
-			name = YoutubeUploader;
+			name = YouTubeUploader;
 			productName = YoutubeUploader;
-			productReference = D06710921B85AFBF00241C0D /* YoutubeUploader.app */;
+			productReference = D06710921B85AFBF00241C0D /* YouTubeUploader.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D067108D1B85AFBF00241C0D /* Build configuration list for PBXProject "YoutubeUploader" */;
+			buildConfigurationList = D067108D1B85AFBF00241C0D /* Build configuration list for PBXProject "YouTubeUploader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D06710911B85AFBF00241C0D /* YoutubeUploader */,
+				D06710911B85AFBF00241C0D /* YouTubeUploader */,
 			);
 		};
 /* End PBXProject section */
@@ -391,7 +391,7 @@
 				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YouTubeUploader.temp_caseinsensitive_rename;
 			};
 			name = Debug;
 		};
@@ -412,14 +412,14 @@
 				);
 				INFOPLIST_FILE = YoutubeUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YouTubeUploader.temp_caseinsensitive_rename;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D067108D1B85AFBF00241C0D /* Build configuration list for PBXProject "YoutubeUploader" */ = {
+		D067108D1B85AFBF00241C0D /* Build configuration list for PBXProject "YouTubeUploader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D06710B31B85AFBF00241C0D /* Debug */,
@@ -428,7 +428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D06710B51B85AFBF00241C0D /* Build configuration list for PBXNativeTarget "YoutubeUploader" */ = {
+		D06710B51B85AFBF00241C0D /* Build configuration list for PBXNativeTarget "YouTubeUploader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D06710B61B85AFBF00241C0D /* Debug */,
