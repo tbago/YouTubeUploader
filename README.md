@@ -11,7 +11,8 @@ So I prefer to rewrite part of the code.
 
 ##Config YouTube ClientID & Client Secret
 First open the [Enable YouTube Data API](https://console.developers.google.com/flows/enableapi?apiid=youtube) link.
-Then Open APIs & auth->Credentials link in [Google Console](https://console.developers.google.com).Click Add credentials Button,then Choose OAuth 2.0 client ID. For application type choose **Other**(Not iOS type).Then you will get the Client ID and Client Secret.
+Then Open APIs & auth->Credentials link in [Google Console](https://console.developers.google.com).Click Add credentials Button,then choose OAuth 2.0 client ID. For application type choose **Other**(Not iOS type).Then you will get the Client ID and Client Secret.
+Then replay my test Client ID & Secret in **Utils.h**.
 
 ## License
 
