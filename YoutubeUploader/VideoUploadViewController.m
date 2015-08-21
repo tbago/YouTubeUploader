@@ -37,6 +37,9 @@
 @property (weak, nonatomic) IBOutlet UITextField    *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField    *descriptionTextField;
 
+@property(nonatomic, retain) MPMoviePlayerController    *player;
+@property(nonatomic, retain) UITextField                *activeField;
+@property(nonatomic, strong) YouTubeUploadVideo         *uploadVideo;
 @end
 
 @implementation VideoUploadViewController
@@ -47,25 +50,26 @@
     _uploadVideo = [[YouTubeUploadVideo alloc] init];
     _uploadVideo.delegate = self;
     
+    [self registerForKeyboardNotifications];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     // Do any additional setup after loading the view.
     self.player = [[MPMoviePlayerController alloc] initWithContentURL:_videoUrl];
     self.player.view.frame = self.playerBackView.frame;
     [self.playerBackView addSubview:self.player.view];
     [self.player play];
-    
-    UIBarButtonItem* uploadItem =
-    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-                                                  target:self
-                                                  action:@selector(uploadYTDL:)];
-    uploadItem.title = @"Upload";
-    self.toolbarItems = [NSArray arrayWithObjects:uploadItem, nil];
-    
-    [self registerForKeyboardNotifications];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    self.player.view.frame = self.playerBackView.frame;
 }
 
 #pragma mark - action
@@ -116,7 +120,11 @@
     //    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     //    _scrollView.contentInset = contentInsets;
     //    _scrollView.scrollIndicatorInsets = contentInsets;
-    [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    contentInsets.top = 64.0f;
+    contentInsets.bottom = 44.0f;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
 }
 
 
@@ -134,9 +142,8 @@
     CGRect bkgndRect = self.activeField.superview.frame;
     bkgndRect.size.height += kbSize.height;
     [self.activeField.superview setFrame:bkgndRect];
-    [self.scrollView
-     setContentOffset:CGPointMake(0.0, self.activeField.frame.origin.y - kbSize.height)
-     animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(0.0, self.activeField.frame.origin.y - kbSize.height)
+                             animated:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
