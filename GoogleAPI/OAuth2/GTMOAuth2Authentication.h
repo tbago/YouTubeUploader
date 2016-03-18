@@ -27,6 +27,9 @@
   #endif
 #endif
 
+#undef GTM_USE_SESSION_FETCHER
+#define GTM_USE_SESSION_FETCHER 0
+
 #if GTM_USE_SESSION_FETCHER
   #import "GTMSessionFetcher.h"
 #else

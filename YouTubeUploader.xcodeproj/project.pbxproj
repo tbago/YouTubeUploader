@@ -26,7 +26,7 @@
 		D06712DA1B85BD5700241C0D /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712D91B85BD5700241C0D /* VideoPlayerViewController.m */; };
 		D06712DC1B85BDAF00241C0D /* iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = D06712DB1B85BDAF00241C0D /* iframe-player.html */; };
 		D06712DF1B85BDFF00241C0D /* VideoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06712DE1B85BDFF00241C0D /* VideoUploadViewController.m */; };
-		D06712E31B85BEC800241C0D /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06712E21B85BEC800241C0D /* GTMOAuth2ViewTouch.xib */; };
+		D0C660561C9BD20600283EAA /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C660551C9BD20600283EAA /* GTMOAuth2ViewTouch.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +62,7 @@
 		D06712DB1B85BDAF00241C0D /* iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "iframe-player.html"; path = "YoutubeUploader/iframe-player.html"; sourceTree = SOURCE_ROOT; };
 		D06712DD1B85BDFF00241C0D /* VideoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploadViewController.h; sourceTree = "<group>"; };
 		D06712DE1B85BDFF00241C0D /* VideoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploadViewController.m; sourceTree = "<group>"; };
-		D06712E21B85BEC800241C0D /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		D0C660551C9BD20600283EAA /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 		D06712E11B85BEB200241C0D /* Touch */ = {
 			isa = PBXGroup;
 			children = (
-				D06712E21B85BEC800241C0D /* GTMOAuth2ViewTouch.xib */,
+				D0C660551C9BD20600283EAA /* GTMOAuth2ViewTouch.xib */,
 			);
 			path = Touch;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06712E31B85BEC800241C0D /* GTMOAuth2ViewTouch.xib in Resources */,
+				D0C660561C9BD20600283EAA /* GTMOAuth2ViewTouch.xib in Resources */,
 				D06710A11B85AFBF00241C0D /* Main.storyboard in Resources */,
 				D06710A61B85AFBF00241C0D /* LaunchScreen.xib in Resources */,
 				D06710A31B85AFBF00241C0D /* Images.xcassets in Resources */,

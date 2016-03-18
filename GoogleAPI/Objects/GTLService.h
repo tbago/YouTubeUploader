@@ -41,6 +41,9 @@
   #define GTL_USE_SESSION_FETCHER GTM_USE_SESSION_FETCHER
 #endif  // GTL_USE_SESSION_FETCHER
 
+#undef GTM_USE_SESSION_FETCHER
+#define GTM_USE_SESSION_FETCHER 0
+
 #if GTL_USE_SESSION_FETCHER
   #define GTLUploadFetcherClass GTMSessionUploadFetcher
   #define GTLUploadFetcherClassStr @"GTMSessionUploadFetcher"
