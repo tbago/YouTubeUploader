@@ -9,6 +9,10 @@ So I prefer to rewrite part of the code.
 - Using storyboard instead of create UI element in code.
 - Modify party of code in Modern Objective C.
 
+##More Info
+This project is hard to use.So I create another project [YoutubeUploaderFramework](https://github.com/tbago/YouTubeUploaderFramework).I encapsulate the project into one framework.You only need some API call to upload video.
+Very easy to use.Hope you like it.
+
 ##Config YouTube ClientID & Client Secret
 First open the [Enable YouTube Data API](https://console.developers.google.com/flows/enableapi?apiid=youtube) link.
 Then Open APIs & auth->Credentials link in [Google Console](https://console.developers.google.com).Click Add credentials Button,then choose OAuth 2.0 client ID. For application type choose **Other**(Not iOS type).Then you will get the Client ID and Client Secret.
